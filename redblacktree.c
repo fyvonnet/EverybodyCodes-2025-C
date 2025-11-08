@@ -348,7 +348,7 @@ static void *rb_insert(redblacktree *T, redblacktree_node *z)
 {
     redblacktree_node *y = T->nil;
     redblacktree_node *x = T->root;
-    int c;
+    int c = 0;
 
     while (x != T-> nil) {
         y = x;
