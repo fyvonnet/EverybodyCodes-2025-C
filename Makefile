@@ -9,7 +9,8 @@ all: \
 	quest02-p1 quest02-p2 quest02-p3 quest02-p3-visu \
 	quest03-p1 quest03-p2 quest03-p3 quest03-p1-tree quest03-p2-tree \
 	quest04-p1 quest04-p2 quest04-p3 \
-	quest05-p1 quest05-p2 quest05-p3
+	quest05-p1 quest05-p2 quest05-p3 \
+	quest07-p1 quest07-p2 quest07-p3
 
 
 
@@ -49,6 +50,12 @@ quest05-p2.o: quest05-p2.c misc.h
 
 quest05-p3.o: quest05-p3.c misc.h
 
+quest07-p1.o: quest07-p1.c misc.h
+
+quest07-p2.o: quest07-p2.c misc.h
+
+quest07-p3.o: quest07-p3.c misc.h deque.h
+
 
 
 quest01-p1: quest01-p1.o misc.o
@@ -86,4 +93,10 @@ quest05-p1: quest05-p1.o misc.o
 quest05-p2: quest05-p2.o misc.o
 
 quest05-p3: quest05-p3.o misc.o
+
+quest07-p1: quest07-p1.o misc.o
+
+quest07-p2: quest07-p2.o misc.o
+
+quest07-p3: quest07-p3.o misc.o deque.o
 
