@@ -12,6 +12,16 @@ extern deque *deque_create()
 
 
 
+extern void* deque_peek_head(deque *d)
+{
+    if (d->head == NULL)
+        return NULL;
+
+    return d->head->data;
+}
+
+
+
 extern void* deque_pop_head(deque *d)
 {
     if (d->head == NULL)
@@ -26,6 +36,22 @@ extern void* deque_pop_head(deque *d)
 
     free(n);
     return v;
+}
+
+
+
+extern void deque_push_head(deque *d, void *v)
+{
+    deque_node *n = (deque_node *)malloc(sizeof(deque_node));
+    n->data = v;
+    n->next = NULL;
+
+    if (d->head == NULL)
+        d->head = d->tail = n;
+    else {
+        n->next = d->head;
+        d->head = n;
+    }
 }
 
 
